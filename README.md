@@ -1,9 +1,3 @@
-# -Virtual_Data_Center_Topology_Simulation
-
-Certainly, here's a consolidated and concise version of your readme:
-
----
-
 # Virtual Data Center Topology Simulation Readme
 
 ## Overview
