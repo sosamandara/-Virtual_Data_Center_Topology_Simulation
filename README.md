@@ -60,7 +60,7 @@ In r-regular graphs ($r = 2$ and $r = 8$), we analyzed connectivity probability 
 - Calculates mean response time (E[R]) and job running cost (S).
 - Normalizes results using single-server performance (Rbase and Sbase).
 
-<img width="450" alt="plot3" src="https://user-images.githubusercontent.com/113529675/271731193-17a5a9d4-666e-43d6-b398-1716ffa708d9.PNG"> | <img width="450" alt="plot4" src="https://user-images.githubusercontent.com/113529675/271731270-5f6e95a4-888e-4a8b-b0c0-0125e5f5af78.PNG">
+<img width="600" alt="plot3" src="https://user-images.githubusercontent.com/113529675/271731193-17a5a9d4-666e-43d6-b398-1716ffa708d9.PNG"> | <img width="600" alt="plot4" src="https://user-images.githubusercontent.com/113529675/271731270-5f6e95a4-888e-4a8b-b0c0-0125e5f5af78.PNG">
 
 ## Results
 
