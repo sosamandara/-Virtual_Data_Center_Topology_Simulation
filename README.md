@@ -67,5 +67,9 @@ In r-regular graphs ($r = 2$ and $r = 8$), we analyzed connectivity probability 
 - Figures illustrate expected response time and job running cost.
 - Key insights highlight optimal server numbers and the impact of adding more servers.
 
+
+# Used technologies
+
+![Python](https://a11ybadges.com/badge?logo=python)
 ---
 
