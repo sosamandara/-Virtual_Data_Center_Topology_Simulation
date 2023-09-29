@@ -1,4 +1,4 @@
-# Virtual Data Center Topology Simulation Readme
+# Virtual Data Center Topology Simulation 
 
 ## Overview
 
