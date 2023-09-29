@@ -28,15 +28,38 @@ In r-regular graphs ($r = 2$ and $r = 8$), we analyzed connectivity probability 
 
 ## Fat-Tree and Jellyfish Analysis
 
-We implemented Fat-Tree and Jellyfish topologies with n = 64 ports. Key insights from our study include:
+*Fat-Tree Topology*
 
-- **Fat-Tree**: Deterministic structure, unaffected by server choice.
-- **Jellyfish**: Random interconnect scheme, requiring randomized server selection.
+- Determines switch and server requirements.
+- Constructs a structured graph following the Fat-Tree pattern.
 
-## Conclusion
+*Jellyfish Topology*
 
-This readme summarizes our findings regarding the connectivity and performance of virtual data center topologies. These insights are crucial for optimizing network configurations and avoiding overload, especially when dealing with large-scale data center setups.
+- Creates a topology with the same switches as Fat-Tree.
+- Uses the r-regular graph for specific switch connections.
+
+*Performance Simulation*
+
+- Randomly selects a server (A).
+- Identifies N nearest servers using Dijkstra's algorithm.
+- Simulates task completion time and output size.
+- Calculates Round Trip Time (RTT) and average throughput.
+- Measures input/output transfer time.
+
+*Metrics*
+
+- Computes response time (R) and job running cost (S).
+
+*Repeated Simulation*
+
+- Repeats the simulation 100 times for N values from 1 to 10,000.
+- Calculates mean response time (E[R]) and job running cost (S).
+- Normalizes results using single-server performance (Rbase and Sbase).
+
+*Results*
+
+- Figures illustrate expected response time and job running cost.
+- Key insights highlight optimal server numbers and the impact of adding more servers.
 
 ---
 
-This consolidated readme provides an overview of your simulation study, including insights on connectivity and computational complexities for different graph types and the analysis of Fat-Tree and Jellyfish topologies.
