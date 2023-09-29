@@ -12,6 +12,8 @@ We first explored the connectivity of random graphs, focusing on p-ER and r-regu
 - **Eigenvalue Analysis (p-ER)**: $O(K^3)$, optimized for larger graphs with parallelization.
 - **Breadth-First Search (BFS) Algorithm**: $O(K + E)$, where $E$ is the number of edges.
 
+<img width="485" alt="plot1" src="https://user-images.githubusercontent.com/113529675/271730219-019ee213-38c7-4c73-b919-9b4eed9fe759.png">
+
 ## Connectivity in p-ER Graphs
 
 We estimated the probability of a p-ER graph being connected. For $K = 100$ nodes, we observed:
@@ -56,7 +58,7 @@ In r-regular graphs ($r = 2$ and $r = 8$), we analyzed connectivity probability 
 - Calculates mean response time (E[R]) and job running cost (S).
 - Normalizes results using single-server performance (Rbase and Sbase).
 
-*Results*
+## Results
 
 - Figures illustrate expected response time and job running cost.
 - Key insights highlight optimal server numbers and the impact of adding more servers.
