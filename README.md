@@ -1,48 +1,48 @@
 # -Virtual_Data_Center_Topology_Simulation
 
-*Overview*
-This readme provides an overview of a simulation project that focuses on evaluating the performance of two virtual data center topologies: Fat-Tree and Jellyfish. The simulation assesses the response time and job running cost as functions of the number of servers used to process a generic job in these topologies. This project employs Python with the Networkx module to conduct the simulation.
+Certainly, here's a consolidated and concise version of your readme:
 
-*Simulation Steps*
-1. *Building Virtual Data Center Topology*
-*Fat-Tree Topology*
-- Calculates the number of core switches, aggregator switches, edge switches, and servers needed.
-- Constructs an empty graph and populates it with different types of nodes, including core, aggregator, edge switches, and servers.
-- Establishes connections between switches following the Fat-Tree structure, connecting edge switches to servers.
+---
 
-  
-*Jellyfish Topology*
+# Virtual Data Center Topology Simulation Readme
 
-- Creates a topology with the same number of switches as Fat-Tree but with a different interconnect scheme.
-- Uses the r-regular graph function to ensure each switch has a specific degree (r connections).
-- Adds servers to each switch.
+## Overview
 
-  
-2. *Simulating Response Time (R) and Job Running Cost (S)*
-   
-*Simulation Setup*
-- Randomly selects a server (A) from the virtual network.
-- Identifies the N nearest servers to A using Dijkstra's algorithm.
-- Simulates task completion time for each neighbor server based on an exponential distribution.
-- Simulates the output size for each neighbor server.
-- Calculates the Round Trip Time (RTT) between A and each neighbor.
-- Computes the average throughput for each neighbor.
-- Determines the time it takes for each neighbor to receive input from A and send output back to A.
+This readme provides a summary of a simulation study that evaluates the performance and connectivity of different virtual data center topologies: Fat-Tree and Jellyfish. We analyze computational complexities, connectivity probabilities, and the impact of node count on connectivity.
 
-*Response Time and Job Running Cost*
-- Computes the response time (R) as the sum of task completion time, RTT, and input/output transfer time.
-- Calculates the job running cost (S) as the sum of response times for all neighbors.
+## Connectivity and Computational Complexity
 
-  
-3. *Repeating the Simulation*
-- Repeats the entire simulation process 100 times for N values ranging from 1 to 10,000.
-- Calculates the mean response time (E[R]) and job running cost (S) for each N.
-- Normalizes the results over the response time and job running cost when only server A is used (Rbase and Sbase).
+We first explored the connectivity of random graphs, focusing on p-ER and r-regular graphs. The computational complexities of various methods were compared:
 
-  
-*Results and Analysis*
-The readme includes figures illustrating the average expected response time and job running cost for both Fat-Tree and Jellyfish topologies as a function of the number of servers used to split the job. Key findings are highlighted, such as the optimal number of servers that minimize job running cost and the impact of adding more servers on performance.
+- **Matrix Exponential Method (p-ER)**: $O(K^3)$, where $K$ is the number of nodes.
+- **Eigenvalue Analysis (p-ER)**: $O(K^3)$, optimized for larger graphs with parallelization.
+- **Breadth-First Search (BFS) Algorithm**: $O(K + E)$, where $E$ is the number of edges.
 
-*Conclusion*
+## Connectivity in p-ER Graphs
 
-The readme concludes by emphasizing the importance of performance studies to determine the ideal number of servers and avoid network overload in data center topologies. It summarizes the project's key insights and encourages further exploration of virtual data center topologies and their performance characteristics.
+We estimated the probability of a p-ER graph being connected. For $K = 100$ nodes, we observed:
+
+- Low probability of connectivity for small $p (≤ 0.03)$.
+- Rapid increase in connectivity probability as p rises from 0.03 to 0.12.
+
+## Connectivity in r-Regular Graphs
+
+In r-regular graphs ($r = 2$ and $r = 8$), we analyzed connectivity probability with respect to the number of nodes (K):
+
+- For $r = 2$, as K increased, connectivity probability decreased due to limited connections.
+- For $r = 8$, the graph remained connected as each node had more connections.
+
+## Fat-Tree and Jellyfish Analysis
+
+We implemented Fat-Tree and Jellyfish topologies with n = 64 ports. Key insights from our study include:
+
+- **Fat-Tree**: Deterministic structure, unaffected by server choice.
+- **Jellyfish**: Random interconnect scheme, requiring randomized server selection.
+
+## Conclusion
+
+This readme summarizes our findings regarding the connectivity and performance of virtual data center topologies. These insights are crucial for optimizing network configurations and avoiding overload, especially when dealing with large-scale data center setups.
+
+---
+
+This consolidated readme provides an overview of your simulation study, including insights on connectivity and computational complexities for different graph types and the analysis of Fat-Tree and Jellyfish topologies.
