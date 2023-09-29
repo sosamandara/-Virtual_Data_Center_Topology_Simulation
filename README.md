@@ -71,5 +71,6 @@ In r-regular graphs ($r = 2$ and $r = 8$), we analyzed connectivity probability 
 # Used technologies
 
 ![Python](https://a11ybadges.com/badge?logo=python)
+
 ---
 
